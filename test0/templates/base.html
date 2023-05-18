@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动化测试平台</title>
+    <style>
+        /* 添加样式和布局 */
+
+        /* 设置登录表单的宽度和居中对齐 */
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        /* 设置标签和输入框的间距和样式 */
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        /* 设置按钮的样式 */
+        button[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* 设置按钮的悬停样式 */
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 设置背景图 */
+        body {
+            background-image: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wEb0?ver=4481');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

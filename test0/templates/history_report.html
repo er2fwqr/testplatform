@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History Report</title>
+</head>
+<body>
+    <h1>History Report</h1>
+    <ul>
+    {% for report in history_reports %}
+    <li><a href="{% url 'history_report_item' report %}">{{ report }}</a></li>
+    {% empty %}
+    <li>No reports available.</li>
+    {% endfor %}
+</ul>
+
+    <a href="{% url 'test_report' %}">Back to Test Report</a>
+</body>
+</html>
+
+

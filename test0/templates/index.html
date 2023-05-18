@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test Runner</title>
+    <style>
+        /* 添加样式和布局 */
+
+        /* 设置整体布局和居中对齐 */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 设置表单和按钮的样式 */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* 设置链接的样式 */
+        a {
+            margin-top: 10px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        /* 设置链接的悬停样式 */
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="server">选择执行测试的服务器:</label>
+        <select name="server" id="server">
+            {% for config_file in server_configs %}
+            <option value="{{ config_file }}">{{ config_file }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Run tests</button>
+    </form>
+<!--    <form method="post">-->
+<!--        {% csrf_token %}-->
+<!--        <button type="submit">Run tests</button>-->
+<!--    </form>-->
+    <br>
+    <a href="{% url 'test_report' %}">View Test Results</a>
+    <br>
+    <a href="{% url 'history_report' %}">View History Results</a>
+    <br>
+    <a href="{% url 'logout' %}">Logout</a>
+    <br>
+
+</body>
+</html>
