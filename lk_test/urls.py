@@ -30,6 +30,8 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('admin/', admin.site.urls),
     path('history_report/',views.history_report,name='history_report'),
-    path('history_report_item/<str:report_path>/',views.history_report_item,name='history_report_item')
+    path('history_report_item/<str:report_path>/',views.history_report_item,name='history_report_item'),
+    path('set_ini/',views.set_ini,name='set_ini'),
+
 ]
 

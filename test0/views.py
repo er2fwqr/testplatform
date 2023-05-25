@@ -28,20 +28,18 @@ from test0.api_test.cases.lksense_turn_page_test import Turn_Page_test
 from test0.api_test.bases.base import Request
 import configparser
 
-class MyTest(unittest.TestCase):
-    def build_param(self,server):
-        conf=configparser.ConfigParser()
-        conf.read(r'./test0/api_test/lksense.ini')
 
-        pass
-
-
-
-    def test_login(self):
-        res = requests.post(url='http://192.168.0.177/auth/xlogin',
-                            data={'username': 'linksense', 'password': 'lksense@2018'})
-        self.assertEqual(res.json()['success'], True)
-
+def set_ini(request):
+    if request.method == 'POST':
+        input_value = request.POST['input_name']
+        conf = configparser.ConfigParser()
+        conf.read(r'test0/api_test/conf/lksense.ini')
+        conf.set(section='server', option='ip', value=input_value)
+        with open(r'test0/api_test/conf/lksense.ini', 'w') as config_file:
+            conf.write(config_file)
+        return HttpResponse('已切换至目标服务器')
+    else:
+        return HttpResponse('Invalid request method')
 
 
 

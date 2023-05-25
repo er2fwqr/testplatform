@@ -47,15 +47,22 @@
     </style>
 </head>
 <body>
+    <form method="post" action="{% url 'set_ini' %}">
+        {% csrf_token %}
+        <label for="input_name">请输入目标服务器地址：</label>
+        <input type="text" name="input_name" id="input_name">
+        <input type="submit" value="提交">
+
+    </form>
     <form method="post">
         {% csrf_token %}
-        <label>请输入目标服务器地址：</label>
-<!--        <select name="server" id="server">-->
-<!--            {% for config_file in server_configs %}-->
-<!--            <option value="{{ config_file }}">{{ config_file }}</option>-->
-<!--            {% endfor %}-->
-<!--        </select>-->
-        <input type="text" name="ip_address">
+<!--        <label>请输入目标服务器地址：</label>-->
+<!--&lt;!&ndash;        <select name="server" id="server">&ndash;&gt;-->
+<!--&lt;!&ndash;            {% for config_file in server_configs %}&ndash;&gt;-->
+<!--&lt;!&ndash;            <option value="{{ config_file }}">{{ config_file }}</option>&ndash;&gt;-->
+<!--&lt;!&ndash;            {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;        </select>&ndash;&gt;-->
+<!--        <input type="text" name="ip_address">-->
 
         <br>
         <button type="submit">Run tests</button>

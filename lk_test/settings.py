@@ -141,3 +141,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/index/'
 LOGOUT_REDIRECT_URL = '/'
+from test0 .config import IniConfig
+ini_config=IniConfig()
+ini_config.load_config(r'api_test/conf/lksense.ini')
