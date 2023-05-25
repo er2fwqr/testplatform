@@ -20,8 +20,10 @@ from test0 import views
 from django.contrib.auth import views as auth_views
 
 
+
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', auth_views.LoginView.as_view(success_url='/index/'), name='login'),
+    path('index/',views.index,name='index'),
     path('test_report/', views.test_report, name='test_report'),
     path('report/', views.test_report, name='report'),
     path('login/', auth_views.LoginView.as_view(), name='login'),

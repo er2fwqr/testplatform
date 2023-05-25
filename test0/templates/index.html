@@ -49,12 +49,14 @@
 <body>
     <form method="post">
         {% csrf_token %}
-        <label for="server">选择执行测试的服务器:</label>
-        <select name="server" id="server">
-            {% for config_file in server_configs %}
-            <option value="{{ config_file }}">{{ config_file }}</option>
-            {% endfor %}
-        </select>
+        <label>请输入目标服务器地址：</label>
+<!--        <select name="server" id="server">-->
+<!--            {% for config_file in server_configs %}-->
+<!--            <option value="{{ config_file }}">{{ config_file }}</option>-->
+<!--            {% endfor %}-->
+<!--        </select>-->
+        <input type="text" name="ip_address">
+
         <br>
         <button type="submit">Run tests</button>
     </form>

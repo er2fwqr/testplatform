@@ -7,7 +7,7 @@
 <body>
     <h1>History Report</h1>
     <ul>
-    {% for report in history_reports %}
+    {% for report in history_reports reversed %}
     <li><a href="{% url 'history_report_item' report %}">{{ report }}</a></li>
     {% empty %}
     <li>No reports available.</li>

@@ -55,7 +55,9 @@ class NG_Data_Api:
 
 if __name__ == '__main__':
     print(NG_Data_Api().stack_info)
+    print(NG_Data_Api().json)
     cookies = requests.utils.dict_from_cookiejar(Login_Api().api_login().cookies)
     print(cookies)
     res = NG_Data_Api().ng_data_api(cookies=cookies)
-    print(len(res.json()['data']['all_assets']))
+    # print(len(res.json()['data']['all_assets']))
+    print(res.json())

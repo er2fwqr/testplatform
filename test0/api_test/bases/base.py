@@ -12,6 +12,7 @@ class Request:
         conf = configparser.ConfigParser()
 
         conf.read(config_path, encoding='utf8')
+
         url=conf.get(section,api).replace('192.168.0.177',conf.get('server','ip'))
         return url
 
@@ -143,3 +144,5 @@ class Ssh_server:
 
 
 
+if __name__ == '__main__':
+    print(Request().build_url('server','ip'))

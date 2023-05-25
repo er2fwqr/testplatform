@@ -2,3 +2,4 @@ user,password,expected_result
 1,1,False
 linksense,lksense@2018,True
 linksense, ,False
+aaa,aaa,True
