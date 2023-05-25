@@ -1,4 +1,4 @@
-from django.shortcuts import render
+
 from django.shortcuts import render
 from django.http import HttpResponse
 import unittest
@@ -138,7 +138,7 @@ def test_report(request):
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
+from django.shortcuts import  redirect
 
 
 def login_view(request):
