@@ -1,81 +1,46 @@
 
 Running tests... 
 ----------------------------------------------------------------------
- test_login_1___1____1____False__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.009631)s
- test_login_2___linksense____lksense_2018____True__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.173133)s
- test_login_3___linksense_________False__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.157194)s
- test_login_4___aaa____aaa____True__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.161907)s
- test_avi_get (test0.api_test.cases.lksense_avi_get_test.Avi_Get_test) ... OK (0.342896)s
- test_asset_get (test0.api_test.cases.lksense_asset_get_test.Asset_Get_test) ... OK (0.384616)s
- test_asset_average (test0.api_test.cases.lksense_asset_average_test.Asset_Average_test) ... OK (0.350458)s
- test_basic_config (test0.api_test.cases.lksense_basic_vrsconfig_test.Basic_Vrsconfig) ... OK (0.322818)s
- test_change_vrs_result (test0.api_test.cases.lksense_change_vrs_result_test.Change_Vrs_Result_test) ... OK (0.382800)s
- test_config_get (test0.api_test.cases.lksense_config_get_test.Congfig_Get_test) ... OK (0.416618)s
- test_gpu_update (test0.api_test.cases.lksense_gpu_update_test.GPU_Update_test) ... OK (0.566957)s
- test_get_user (test0.api_test.cases.lksense_get_user_test.Get_User_test) ... OK (0.351564)s
- test_gpu_info_get (test0.api_test.cases.lksense_gpu_info_get_test.GPU_Info_Get_test) ... OK (0.520762)s
- test_label (test0.api_test.cases.lksense_label_test.Label_test) ... OK (0.758597)s
- test_machine_data (test0.api_test.cases.lksense_machine_data_test.Machine_Data_test) ... OK (0.410277)s
- test_machine_manage (test0.api_test.cases.lksense_machine_manage_test.Machine_manage_test) ... OK (50.255591)s
- test_ngdata_get (test0.api_test.cases.lksense_ngdata_get_test.Ngdata_Get_test) ... ERROR (50.539553)s
- test_page_permission (test0.api_test.cases.lksense_page_permission_test.Page_Permission_test) ... OK (0.193174)s
- test_stack_data (test0.api_test.cases.lksense_stack_data_test.Stack_Data_test) ... ERROR (50.413132)s
- test_point (test0.api_test.cases.lksense_turn_page_test.Turn_Page_test) ... OK (0.445271)s
- test_turn_page (test0.api_test.cases.lksense_turn_page_test.Turn_Page_test) ... OK (0.371743)s
+ test_login_1___1____1____False__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.014777)s
+ test_login_2___linksense____lksense_2018____True__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.061216)s
+ test_login_3___linksense_________False__ (test0.api_test.cases.lksense_login_test.Login_test) ... OK (0.053511)s
+ test_login_4___aaa____aaa____True__ (test0.api_test.cases.lksense_login_test.Login_test) ... FAIL (0.006677)s
+ test_avi_get (test0.api_test.cases.lksense_avi_get_test.Avi_Get_test) ... OK (0.142072)s
+ test_asset_get (test0.api_test.cases.lksense_asset_get_test.Asset_Get_test) ... OK (0.130793)s
+ test_asset_average (test0.api_test.cases.lksense_asset_average_test.Asset_Average_test) ... OK (0.607511)s
+ test_basic_config (test0.api_test.cases.lksense_basic_vrsconfig_test.Basic_Vrsconfig) ... OK (0.110022)s
+ test_change_vrs_result (test0.api_test.cases.lksense_change_vrs_result_test.Change_Vrs_Result_test) ... OK (0.377987)s
+ test_config_get (test0.api_test.cases.lksense_config_get_test.Congfig_Get_test) ... OK (0.128766)s
+ test_gpu_update (test0.api_test.cases.lksense_gpu_update_test.GPU_Update_test) ... OK (0.350203)s
+ test_get_user (test0.api_test.cases.lksense_get_user_test.Get_User_test) ... OK (0.112534)s
+ test_gpu_info_get (test0.api_test.cases.lksense_gpu_info_get_test.GPU_Info_Get_test) ... OK (0.121515)s
+ test_label (test0.api_test.cases.lksense_label_test.Label_test) ... OK (0.482573)s
+ test_machine_data (test0.api_test.cases.lksense_machine_data_test.Machine_Data_test) ... OK (0.154080)s
+ test_machine_manage (test0.api_test.cases.lksense_machine_manage_test.Machine_manage_test) ... OK (1.040771)s
+ test_ngdata_get (test0.api_test.cases.lksense_ngdata_get_test.Ngdata_Get_test) ... OK (0.357862)s
+ test_page_permission (test0.api_test.cases.lksense_page_permission_test.Page_Permission_test) ... OK (0.073269)s
+ test_stack_data (test0.api_test.cases.lksense_stack_data_test.Stack_Data_test) ... OK (0.395741)s
+ test_point (test0.api_test.cases.lksense_turn_page_test.Turn_Page_test) ... OK (0.359260)s
+ test_turn_page (test0.api_test.cases.lksense_turn_page_test.Turn_Page_test) ... OK (0.149356)s
 
 ======================================================================
-ERROR [50.539553s]: test0.api_test.cases.lksense_ngdata_get_test.Ngdata_Get_test.test_ngdata_get
+FAIL [0.006677s]: test0.api_test.cases.lksense_login_test.Login_test.test_login_4___aaa____aaa____True__
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\Python38-32\lib\site-packages\requests\models.py", line 972, in json
-    return complexjson.loads(self.text, **kwargs)
-  File "D:\Python38-32\lib\json\__init__.py", line 357, in loads
-    return _default_decoder.decode(s)
-  File "D:\Python38-32\lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "D:\Python38-32\lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Python38-32\Scripts\lk_test\test0\api_test\cases\lksense_ngdata_get_test.py", line 27, in test_ngdata_get
-    ngpoint_count=len(res.json()['data']['all_assets'])
-  File "D:\Python38-32\lib\site-packages\requests\models.py", line 976, in json
-    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
-requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-======================================================================
-ERROR [50.413132s]: test0.api_test.cases.lksense_stack_data_test.Stack_Data_test.test_stack_data
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "D:\Python38-32\lib\site-packages\requests\models.py", line 972, in json
-    return complexjson.loads(self.text, **kwargs)
-  File "D:\Python38-32\lib\json\__init__.py", line 357, in loads
-    return _default_decoder.decode(s)
-  File "D:\Python38-32\lib\json\decoder.py", line 337, in decode
-    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-  File "D:\Python38-32\lib\json\decoder.py", line 355, in raw_decode
-    raise JSONDecodeError("Expecting value", s, err.value) from None
-json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "D:\Python38-32\Scripts\lk_test\test0\api_test\cases\lksense_stack_data_test.py", line 25, in test_stack_data
-    res1=Stack_Data_Api().stack_data_api(cookies=self.setUp())
-  File "D:\Python38-32\Scripts\lk_test\test0\api_test\pages\lksense_stack_data.py", line 40, in stack_data_api
-    return res.json()
-  File "D:\Python38-32\lib\site-packages\requests\models.py", line 976, in json
-    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
-requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  File "D:\Python38-32\lib\site-packages\ddt.py", line 220, in wrapper
+    return func(self, *args, **kwargs)
+  File "D:\Python38-32\Scripts\lk_test\test0\api_test\cases\lksense_login_test.py", line 31, in test_login
+    self.assertEqual(str(res.json()['success']),expected_result,'µÇÂ¼Ê§°Ü£¬²âÊÔ²»Í¨¹ý£¡')
+AssertionError: 'False' != 'True'
+- False
++ True
+ : µÇÂ¼Ê§°Ü£¬²âÊÔ²»Í¨¹ý£¡
 
 ----------------------------------------------------------------------
-Ran 21 tests in 0:02:37
+Ran 21 tests in 0:00:05
 
 FAILED
- (Errors=2)
+ (Failures=1)
 
 Generating HTML reports... 
-reports\lk_api_test_2023-05-25_14-48-22.html
+reports\lk_api_test_2023-05-25_18-33-03.html
